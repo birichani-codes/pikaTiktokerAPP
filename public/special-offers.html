@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers | Pika Tiktoker</title>
+    <link rel="icon" type="image/png" href="/assets/f2.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Pika Tiktoker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-tikchats.html">Daily Tik@Chats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/special-offers.html">Special Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-Challenge.html">Daily Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recipePage.html">RECIPE MENU EDITION</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Special Offers Content -->
+    <div class="container mt-5">
+        <h1>Special Offers</h1>
+        <p class="lead">Discover exclusive offers for our community!</p>
+
+      <!-- Special Offers List -->
+<div id="special-offers-list" class="row">
+    <!-- Special Offer 1 -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <img src="assets/cook-c.jpg" class="card-img-top" alt="Special Offer Image 1">
+            <div class="card-body">
+                <h5 class="card-title">50% Off Cooking Class</h5>
+                <p class="card-text">Unlock the secrets of gourmet cooking with our exclusive class. Limited time offer!</p>
+                <p id="offer-timer1" class="offer-timer"></p>
+                <!-- Updated "Claim Offer" button with query parameters -->
+                <a href="#" onclick="claimOffer('cooking-class')" class="btn btn-primary">Claim Offer</a>
+            </div>
+            <!-- Customer Reviews/Testimonials -->
+            <div class="card-footer">
+                <h5>Customer Reviews</h5>
+                <div class="customer-reviews">
+                    <!-- Reviews can be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Offer 2 -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <img src="assets/r-ebook.jpg" class="card-img-top" alt="Special Offer Image 2">
+            <div class="card-body">
+                <h5 class="card-title">Free Recipe E-Book</h5>
+                <p class="card-text">Download our curated recipe collection for free. Limited copies available!</p>
+                <p id="offer-timer2" class="offer-timer"></p>
+                <!-- Updated "Claim Offer" button with query parameters -->
+                <a href="#" onclick="claimOffer('recipe-ebook')" class="btn btn-primary">Claim Offer</a>
+            </div>
+            <!-- Customer Reviews/Testimonials -->
+            <div class="card-footer">
+                <h5>Customer Reviews</h5>
+                <div class="customer-reviews">
+                    <!-- Reviews can be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Interactive FAQ Section -->
+        <div class="faq-section mt-5">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ items can be added dynamically here -->
+            </div>
+        </div>
+
+        <!-- Social Share Buttons -->
+        <div class="social-share mt-5">
+            <h2>Share These Offers</h2>
+            <!-- Social share buttons go here -->
+            <div class="social-buttons">
+                <button class="btn btn-primary"><i class="fab fa-facebook"></i> Share on Facebook</button>
+                <button class="btn btn-info"><i class="fab fa-twitter"></i> Share on Twitter</button>
+                <button class="btn btn-danger"><i class="fab fa-instagram"></i> Share on Instagram</button>
+            </div>
+        </div>
+
+        <!-- Email Subscription Form for Future Offers -->
+        <div class="newsletter-signup mt-5">
+            <h2>Subscribe for Exclusive Offers!</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+<!-- Common Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">About Pika Tiktoker</h5>
+
+                <p>
+                    Pika Tiktoker is your go-to community for sharing and exploring the best in TikTok challenges, dance moves, and engaging discussions. Join us to discover new trends, participate in daily challenges, and connect with fellow enthusiasts.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Quick Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li><a href="/index.html" class="text-dark">Home</a></li>
+                    <li><a href="/daily-tikchats.html" class="text-dark">Daily Tik@Chats</a></li>
+                    <li><a href="#!" class="text-dark">Privacy Policy</a></li>
+                    <li><a href="#!" class="text-dark">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Follow Us</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#!" class="text-dark">Instagram</a></li>
+                    <li><a href="#!" class="text-dark">Twitter</a></li>
+                    <li><a href="#!" class="text-dark">Facebook</a></li>
+                    <li><a href="#!" class="text-dark">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Pika Tiktoker: <a class="text-dark" href="https://www.pikatiktoker.com/">www.pikatiktoker.com</a>
+    </div>
+</footer>
+
+    <!-- Bootstrap and jQuery scripts for functionality
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script for Countdown Timers -->
+    <script>
+        // Set the date we're counting down to for each offer
+        var countDownDate1 = new Date("Apr 30, 2024 23:59:59").getTime();
+        var countDownDate2 = new Date("May 15, 2024 23:59:59").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+
+            var distance1 = countDownDate1 - now;
+            var distance2 = countDownDate2 - now;
+
+            // Output the result in an element with id="offer-timer1" and id="offer-timer2"
+            document.getElementById("offer-timer1").innerHTML = formatCountdown(distance1);
+            document.getElementById("offer-timer2").innerHTML = formatCountdown(distance2);
+
+            // If the count down is over, display "EXPIRED" message
+            if (distance1 < 0) {
+                clearInterval(x);
+                document.getElementById("offer-timer1").innerHTML = "EXPIRED";
+            }
+            if (distance2 < 0) {
+                clearInterval(x);
+                document.getElementById("offer-timer2").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        // Function to format the countdown time
+        function formatCountdown(distance) {
+            if (distance < 0) {
+                return "EXPIRED";
+            }
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            return days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
+        function claimOffer(offer) {
+        // Check if the user is logged in
+        if (isLoggedIn()) {
+            // If logged in, proceed to claim the offer
+            window.location.href = `checkout.html?offer=${offer}`;
+        } else {
+            // If not logged in, redirect to the login page
+            // Store the offer information in localStorage to retrieve it after login
+            localStorage.setItem('offerToClaim', offer);
+            window.location.href = 'login.html';
+        }
+    }
+
+    // Function to check if the user is logged in
+    function isLoggedIn() {
+        // Check if the user is logged in by verifying some authentication token or session
+        // For example, you might check if a token is present in localStorage or if a user session exists
+        // Return true if logged in, false otherwise
+        // Example:
+        return localStorage.getItem('loggedIn') === 'true';
+    }
+    </script>
+</body>
+</html>

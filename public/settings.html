@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Pika Tiktoker</title>
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="/assets/f2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Pika Tiktoker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+    <h2>Settings</h2>
+    
+    <!-- Profile Information Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        Profile Information
+    </div>
+    <div class="card-body">
+        <!-- Profile Information Form -->
+        <form>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="inputProfilePicture">Profile Picture</label>
+                <input type="file" class="form-control-file" id="inputProfilePicture">
+            </div>
+            <div class="form-group">
+                <label for="inputBio">Bio</label>
+                <textarea class="form-control" id="inputBio" rows="3" placeholder="Enter your bio"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+    
+    <!-- Account Settings Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Account Settings
+        </div>
+        <div class="card-body">
+            <!-- Account Settings Form -->
+            <form>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="New Password">
+                </div>
+                <button type="button" class="btn btn-danger">Delete Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Notifications
+        </div>
+        <div class="card-body">
+            <!-- Notifications Form -->
+            <form>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="emailNotifications">
+                        <label class="custom-control-label" for="emailNotifications">Email Notifications</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="smsNotifications">
+                        <label class="custom-control-label" for="smsNotifications">SMS Notifications</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="pushNotifications">
+                        <label class="custom-control-label" for="pushNotifications">Push Notifications</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Privacy Settings -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Privacy Settings
+        </div>
+        <div class="card-body">
+            <!-- Privacy Settings Form -->
+            <form>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="profileVisibility">
+                    <label class="custom-control-label" for="profileVisibility">Profile Visibility</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Theme Selection -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Theme
+        </div>
+        <div class="card-body">
+            <select class="custom-select">
+                <option selected>Select theme</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="auto">Automatic</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Language Selection -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Language
+        </div>
+        <div class="card-body">
+            <select class="custom-select">
+                <option selected>Select Language</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <!-- Additional languages can be added here -->
+            </select>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

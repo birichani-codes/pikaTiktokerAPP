@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tik@Chats</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/f2.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom styles -->
+    <style>
+        .tikchat-card {
+            transition: transform 0.2s; /* Add a smooth transition effect */
+        }
+
+        .tikchat-card:hover {
+            transform: scale(1.05); /* Enlarge the card on hover */
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 15px; /* Add some spacing between navbar items */
+        }
+
+        .navbar-brand {
+            font-size: 1.5em; /* Increase the font size of the brand */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Pika Tiktoker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-tikchats.html">Daily Tik@Chats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/special-offers.html">Special Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-Challenge.html">Daily Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recipePage.html">RECIPE MENU EDITION</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Daily Tik@Chats Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <h2>Daily Tik@Chats</h2>
+                <p>Explore the latest Tik@Chats from our community!</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Morning Cooking Delights -->
+            <div class="col-md-4 mb-4">
+                <div class="card tikchat-card">
+                    <img src="assets/morn-delight.jpg" class="card-img-top" alt="Tik@Chat Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Morning Cooking Delights</h5>
+                        <p class="card-text">Start your day with delicious recipes and culinary discussions. Join us every morning for a delightful cooking experience.</p>
+                        <button type="button" class="btn btn-primary" onclick="joinTikChat('Morning Cooking Delights')">Join Tik@Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthy Eating Habits -->
+            <div class="col-md-4 mb-4">
+                <div class="card tikchat-card">
+                    <img src="assets/healthy-eat.jpg" class="card-img-top" alt="Tik@Chat Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthy Eating Habits</h5>
+                        <p class="card-text">Explore the world of nutritious meals and share your favorite healthy recipes. Let's cultivate good eating habits together!</p>
+                        <button type="button" class="btn btn-primary" onclick="joinTikChat('Healthy Eating Habits')">Join Tik@Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fitness and Wellness Tips -->
+            <div class="col-md-4 mb-4">
+                <div class="card tikchat-card">
+                    <img src="assets/fitness.jpg" class="card-img-top" alt="Tik@Chat Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness and Wellness Tips</h5>
+                        <p class="card-text">Share workout routines, stretching exercises, and tips for maintaining a healthy lifestyle. Encourage discussions about mental well-being, stress management, and self-care practices.</p>
+                        <button type="button" class="btn btn-primary" onclick="joinTikChat('Fitness and Wellness Tips')">Join Tik@Chat</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIY Home Projects -->
+            <div class="col-md-4 mb-4">
+                <div class="card tikchat-card">
+                    <img src="assets/diy.jpg" class="card-img-top" alt="Tik@Chat Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">DIY Home Projects</h5>
+                        <p class="card-text">Showcase creative DIY projects for home decor, organization, or renovation. Provide step-by-step tutorials and tips for viewers to try at home.</p>
+                        <button type="button" class="btn btn-primary" onclick="joinTikChat('DIY Home Projects')">Join Tik@Chat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Common Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">About Pika Tiktoker</h5>
+
+                <p>
+                    Pika Tiktoker is your go-to community for sharing and exploring the best in TikTok challenges, dance moves, and engaging discussions. Join us to discover new trends, participate in daily challenges, and connect with fellow enthusiasts.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Quick Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li><a href="/index.html" class="text-dark">Home</a></li>
+                    <li><a href="/daily-tikchats.html" class="text-dark">Daily Tik@Chats</a></li>
+                    <li><a href="#!" class="text-dark">Privacy Policy</a></li>
+                    <li><a href="#!" class="text-dark">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Follow Us</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#!" class="text-dark">Instagram</a></li>
+                    <li><a href="#!" class="text-dark">Twitter</a></li>
+                    <li><a href="#!" class="text-dark">Facebook</a></li>
+                    <li><a href="#!" class="text-dark">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Pika Tiktoker: <a class="text-dark" href="https://www.pikatiktoker.com/">www.pikatiktoker.com</a>
+    </div>
+</footer>
+
+
+    <!-- JavaScript function for the Join Tik@Chat buttons -->
+    <script>
+        function joinTikChat(chatName) {
+            let userMessage = prompt(`Welcome to ${chatName}! We're excited to have you. Please share a message with the community:`);
+            if (userMessage) {
+                localStorage.setItem(`messageFor${chatName}`, userMessage);
+                alert(`Thanks for sharing! Your message: "${userMessage}" has been saved. Engage and explore ${chatName}!`);
+            } else {
+                alert("You didn't share a message, but you're still welcome to join and explore!");
+            }
+        }
+    </script>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+/* Custom styles for cards */
+
+.card {
+    border-radius: 15px; /* Keeps cards slightly rounded */
+    margin: 20px 0; /* Adds more space around each card */
+    padding: 20px; /* Increases space inside the card, making it appear larger */
+}
+
+.video-card, .text-box {
+    height: auto; /* Adjust based on content, but you can set a min-height */
+    margin-right: 10px; /* Additional spacing for layout */
+}
+
+/* Optional: Set a minimum height for cards to ensure they have a significant size */
+.video-card .card-body, .text-box .card-body {
+    min-height: 300px; /* Example fixed height, adjust as needed */
+}
+
+.card, .card-body {
+    overflow: hidden; /* Maintains circular design for entire card if applied */
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.feature-card {
+    position: absolute;
+    width: 200px; /* Adjust based on content */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.feature-item {
+    color: #333;
+}
+
+.feature-item i {
+    margin-right: 8px;
+}

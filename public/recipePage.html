@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="/assets/f2.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .recipe-content { padding: 20px; }
+        .ingredients, .procedure { margin-bottom: 20px; }
+        .video-container { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">Pika Tiktoker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/daily-tikchats.html">Daily Tik@Chats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/special-offers.html">Special Offers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/daily-Challenge.html">Daily Challenges</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/recipePage.html">RECIPE MENU EDITION</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="container mt-4">
+    <h2>Recipes</h2>
+    <input type="text" id="searchInput" placeholder="Search recipes..." class="form-control mb-4">
+    <div class="row" id="recipeCardsContainer"></div>
+</div>
+
+
+<div class="container mt-4">
+    <h2>Recipes</h2>
+    <div class="row" id="recipeCardsContainer"></div>
+</div>
+
+<!-- Recipe Detail Modal -->
+<div class="modal fade" id="recipeDetailModal" tabindex="-1" role="dialog" aria-labelledby="recipeDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeDetailModalLabel">Recipe Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Recipe details will be injected here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+   const recipes = [
+       {
+        id: 1,
+        title: "Spaghetti Carbonara",
+        description: "It's time to level up your pasta game with Spaghetti Carbonara!",
+        ingredients: [
+            "4 oz Spaghetti",
+            "4 inch slices 4 strips bacon, cut into pieces",
+            "2 Egg yolks",
+            "3/4 cup Parmigiano reggiano",
+            "2 tbsp Black pepper, coarsely ground",
+            "2 tbsp Olive oil",
+            "Basil or parsley for garnish"
+        ],
+        procedure: `
+            <ol>
+                <li>Boil spaghetti in salted water according to the package instructions until al dente.</li>
+                <li>While the pasta cooks, heat olive oil in a pan and cook the bacon until crispy.</li>
+                <li>Beat the egg yolks in a bowl and mix with Parmigiano Reggiano cheese.</li>
+                <li>Combine the pasta with the bacon in the pan, then mix in the egg and cheese mixture.</li>
+                <li>Add black pepper and serve hot, garnished with basil or parsley.</li>
+            </ol>
+        `,
+        videoUrl: "assets/vid2.mp4",
+        imageUrl: "assets/spag.jpg",
+        pictures: [
+            "assets/spg1.jpg",
+            "assets/spg2.jpg",
+            "assets/spg3.jpg"
+        ]
+    },
+        {
+            id: 2,
+            title: "Chicken Alfredo",
+            description: "Creamy and comforting - this Chicken Alfredo will hit the spot.",
+            ingredients: [
+                "2 boneless chicken breasts",
+                "8 oz fettuccine pasta",
+                "1 cup heavy cream",
+                "1/2 cup butter",
+                "1 cup grated Parmesan cheese",
+                "Parsley for garnish"
+            ],
+            procedure: `
+                <ol>
+                    <li>Cook fettuccine according to package instructions.</li>
+                    <li>In a pan, cook chicken until golden and cooked through. Set aside.</li>
+                    <li>In the same pan, melt butter, then add heavy cream and Parmesan cheese until the sauce thickens.</li>
+                    <li>Add cooked pasta to the sauce, top with chicken, and garnish with parsley before serving.</li>
+                </ol>
+            `,
+            videoUrl: "assets/ca.mp4",
+            imageUrl: "assets/ca.jpg",
+            pictures: [
+            "assets/ca1.jpg",
+            "assets/ca2.jpg",
+            "assets/ca3.jpg"
+        ]
+        },
+        {
+            id: 3,
+            title: "Beef Stew",
+            description: "A hearty dish that brings comfort to the soul.",
+            ingredients: [
+                "2 lbs beef stew meat",
+                "3 tbsp flour",
+                "2 tbsp olive oil",
+                "4 cups beef broth",
+                "1 cup red wine",
+                "Potatoes, carrots, and onions",
+                "Salt and pepper to taste"
+            ],
+            procedure: `
+                <ol>
+                    <li>Toss beef stew meat in flour and brown in olive oil in a large pot.</li>
+                    <li>Add beef broth and red wine to the pot. Bring to a simmer.</li>
+                    <li>Add chopped potatoes, carrots, and onions. Simmer until vegetables are tender.</li>
+                    <li>Season with salt and pepper to taste. Serve hot.</li>
+                </ol>
+            `,
+            videoUrl: "assets/bs.mp4",
+            imageUrl: "assets/bs.jpg",
+             pictures: [
+            "assets/bs1.jpg",
+            "assets/bs2.jpg",
+            "assets/bs3.jpg"
+        ]
+        },
+        {
+            id: 4,
+            title: "Vegetable Stir Fry",
+            description: "A quick, colorful, and nutritious dish that will satisfy your hunger.",
+            ingredients: [
+                "2 cups mixed vegetables (bell peppers, broccoli, carrots)",
+                "2 tbsp soy sauce",
+                "1 tbsp olive oil",
+                "1 tsp ginger, minced",
+                "1 garlic clove, minced",
+                "Rice or noodles for serving"
+            ],
+            procedure: `
+                <ol>
+                    <li>Heat oil in a large pan or wok over medium-high heat.</li>
+                    <li>Add garlic and ginger, stir-fry for a few seconds until fragrant.</li>
+                    <li>Add mixed vegetables and stir-fry until tender-crisp.</li>
+                    <li>Stir in soy sauce and serve hot over rice or noodles.</li>
+                </ol>
+            `,
+            videoUrl: "assets/vv.mp4",
+            imageUrl: "assets/vv.jpg",
+             pictures: [
+            "assets/vv1.jpg",
+            "assets/vv2.jpg",
+            "assets/vv.jpg"
+        ]
+        }
+    ];
+
+   function createRecipeCards(searchTerm = '') {
+    const container = document.getElementById("recipeCardsContainer");
+    container.innerHTML = "";
+
+    const filteredRecipes = recipes.filter(recipe => 
+        recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    filteredRecipes.forEach(recipe => {
+        const card = document.createElement("div");
+        card.classList.add("col-md-4", "mb-4");
+        const cardContent = `
+            <div class="card">
+                <img src="${recipe.imageUrl}" class="card-img-top" alt="${recipe.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${recipe.title}</h5>
+                    <p class="card-text">${recipe.description}</p>
+                    <button class="btn btn-primary mr-2" onclick="viewRecipe(${recipe.id})">View Recipe</button>
+                    <button class="btn btn-success mr-2" onclick="saveRecipe(${recipe.id})">Save</button>
+                    <div class="share-buttons">
+                        <!-- Dummy share buttons (replace with actual share functionality) -->
+                        <button class="btn btn-info">Share on Facebook</button>
+                        <button class="btn btn-info">Share on Twitter</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        card.innerHTML = cardContent;
+        container.appendChild(card);
+    });
+}
+
+ function viewRecipe(recipeId) {
+        const recipe = recipes.find(r => r.id === recipeId);
+        if (!recipe) return;
+        const modalBody = document.querySelector("#recipeDetailModal .modal-body");
+        modalBody.innerHTML = `
+            <div class="recipe-content">
+                <h4>${recipe.title}</h4>
+                <p>${recipe.description}</p>
+                <div class="ingredients">
+                    <h5>Ingredients</h5>
+                    <ul>${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join("")}</ul>
+                </div>
+                <div class="procedure">
+                    <h5>Procedure</h5>
+                    ${recipe.procedure}
+                </div>
+                <div class="video-container">
+                    <h5>Watch Video</h5>
+                    <video controls width="100%">
+                        <source src="${recipe.videoUrl}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="picture-cards">
+                    <h5>Related Pictures</h5>
+                    <div class="row">
+                        ${recipe.pictures.map(picture => `
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="${picture}" class="card-img-top" alt="Recipe Image">
+                                </div>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            </div>
+        `;
+        $('#recipeDetailModal').modal('show');
+    }
+    // Function to handle the search input
+    function handleSearch() {
+        const searchValue = document.getElementById('searchInput').value;
+        createRecipeCards(searchValue);
+    }
+     function saveRecipe(recipeId) {
+        const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+        if (!savedRecipes.includes(recipeId)) {
+            savedRecipes.push(recipeId);
+            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+            alert('Recipe saved successfully!');
+        } else {
+            alert('Recipe already saved!');
+        }
+    }
+
+    // Add search event listener
+    document.getElementById('searchInput').addEventListener('keyup', handleSearch);
+
+    // Initial call to display all recipes
+    window.onload = function() {
+        createRecipeCards();
+    };
+</script>
+<div class="container cooking-tips">
+    <h2>Cooking Tips</h2>
+    <p>Here are some helpful tips to improve your cooking skills:</p>
+    <ul>
+        <li>Always read the recipe thoroughly before starting.</li>
+        <li>Use fresh, high-quality ingredients for the best flavor.</li>
+        <li>Keep your knives sharp for safer and more efficient chopping.</li>
+        <li>Don't overcrowd the pan when cooking to ensure proper browning.</li>
+        <li>Experiment with different herbs and spices to add depth to your dishes.</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Pika Tiktoker</title>
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" href="/assets/f2.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Pika Tiktoker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-tikchats.html">Daily Tik@Chats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/special-offers.html">Special Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/daily-Challenge.html">Daily Challenges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recipePage.html">RECIPE MENU EDITION</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container mt-5">
+    <h2>My Account</h2>
+    
+    <!-- Username Settings Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Username Settings
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input type="text" class="form-control" id="inputUsername" placeholder="Enter your username">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="updateUsername()">Save Changes</button>
+        </div>
+    </div>
+    
+    <!-- Password Settings Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Password Settings
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="inputPassword">New Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Enter your new password">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="updatePassword()">Change Password</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Function to update username
+    function updateUsername() {
+        var newUsername = document.getElementById("inputUsername").value;
+        // Update username in client-side storage (replace this with your preferred method of storing data)
+        localStorage.setItem("username", newUsername);
+        alert("Username updated successfully!");
+    }
+
+    // Function to update password
+    function updatePassword() {
+        var newPassword = document.getElementById("inputPassword").value;
+        // Update password in client-side storage (replace this with your preferred method of storing data)
+        localStorage.setItem("password", newPassword);
+        alert("Password changed successfully!");
+    }
+</script>
+
+</body>
+</html>

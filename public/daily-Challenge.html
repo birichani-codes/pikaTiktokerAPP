@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenges | Pika Tiktoker</title>
+    <link rel="icon" type="image/png" href="/assets/f2.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">Pika Tiktoker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/daily-tikchats.html">Daily Tik@Chats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/special-offers.html">Special Offers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/daily-Challenge.html">Daily Challenges</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/recipePage.html">RECIPE MENU EDITION</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Daily Challenges Content -->
+<div class="container mt-5">
+    <h1>Daily Challenges</h1>
+    <p class="lead">Engage with our community by participating in our daily challenges!</p>
+
+    <!-- Challenges List -->
+    <div id="challenges-list">
+        <!-- Example Challenge -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Challenge of the Day
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Today's Challenge: Best Pika Dance</h5>
+                <p class="card-text">Show off your best dance moves with the Pika Dance Challenge. Upload your video and get a chance to be featured on our main page!</p>
+                <!-- Add Timer -->
+                <p id="challenge-timer">Time Left: <span id="timer"></span></p>
+                <a href="#" class="btn btn-primary" onclick="participateInChallenge()">Participate</a>
+
+                <!-- Like button -->
+                <button class="btn btn-outline-primary" onclick="likeChallenge()">Like <span id="like-count">0</span></button>
+
+                <!-- Comment section -->
+                <div class="mt-3">
+                    <h5>Comments</h5>
+                    <div id="comment-list"></div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Add a comment" id="comment-input">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="addComment()">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload section -->
+                <div class="mt-3">
+                    <h5>Upload Your Entry</h5>
+                    <form id="upload-form">
+                        <div class="form-group">
+                            <label for="video-upload">Upload Video (MP4 only)</label>
+                            <input type="file" class="form-control-file" id="video-upload" accept="video/mp4" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image-upload">Upload Image (optional)</label>
+                            <input type="file" class="form-control-file" id="image-upload" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- More challenges can be added here -->
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery scripts for functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your existing JavaScript for the page -->
+
+<script>
+   
