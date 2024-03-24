@@ -1,0 +1,7 @@
+[build]
+command = "npm run build"  # Or the command you use to build your site
+publish = "public"         # Specify your public folder here
+
+[dev]
+command = "npm start"      # Command to start your development server
+port = 8888                # Port number for the development server
